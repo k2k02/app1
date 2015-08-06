@@ -1,0 +1,16 @@
+html
+    head
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js')
+        script(src='../public/libs/angular-route/angular-route.min.js')
+        script(src='../public/javascripts/processJson.js')
+        
+    body 
+        div(ng-app='getJson')
+            div(ng-controller='controller1')
+                div(ng-repeat='post in posts')
+                    div(ng-switch-when='text')
+                  
+                        input(type='text' id='{{post.id}}' ng-model='post.value' placeholder='{{post.placeholder}}')
+        block content
+            
+
